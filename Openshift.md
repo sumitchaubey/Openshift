@@ -1,3 +1,43 @@
+# Openshift
+
+## Content Tables
+
+- [Setup DNS server](#setup-dns-server)
+
+- [Go to forward.zone file](#go-to-forwardzone-file)
+
+- [Go to reverse.zone file](#go-to-reversezone-file)
+
+- [Installing bind utils](#installing-bind-utils)
+
+- [To allow DNS service](#to-allow-dns-service)
+
+- [Setup single node Openshift Cluster](#setup-single-node-openshift-cluster)
+
+- [Install podman](#install-podman)
+
+- [This command is download the OpenShift Container Platform client (oc) and make it available for use](#this-command-is-download-the-openshift-container-platform-client-oc-and-make-it-available-for-use)
+
+- [This command is download Openshift Container Platform installer and make it available for use](#this-command-is-download-openshift-container-platform-installer-and-make-it-available-for-use)
+
+- [Retrieve the RHCOS ISO URL by running the following command:](#retrieve-the-rhcos-iso-url-by-running-the-following-command)
+
+- [Download the RHCOS ISO](#download-the-rhcos-iso)
+
+- [Embed the ignition data into the RHCOS ISO by run this command](#embed-the-ignition-data-into-the-rhcos-iso-by-run-this-command)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```
 [sumit_chaubey@localhost ~]$ cat /etc/hosts
@@ -87,7 +127,7 @@ Complete!
 
 
 
-#  vim /etc/named.conf 
+## vim /etc/named.conf 
 vim: This is a text editor commonly used in Unix-like operating systems. It allows you to view and edit text files.
 
 /etc/named.conf: This is the path to the main configuration file for the BIND DNS server.It's the default location for the named configuration file on many Linux distributions.
@@ -150,12 +190,12 @@ forward.zone: This is the name of the file you are opening. The file extension (
 
 
 
-# cat /var/named/forward.zone
+## cat /var/named/forward.zone
 This command is use to show the change which you have done in vim forward.zone.
 
 ![Alt text](<Screenshot from 2024-02-08 22-58-06.png>)
 
-## Go to reverse.zone
+## Go to reverse.zone file
 ```
 #vim reverse.zone
 
@@ -176,7 +216,7 @@ vim: This is the Vim text editor, commonly used on Unix-like operating systems.
 reverse.zone: Reverse DNS is used to map IP addresses to domain names. If reverse.zone is indeed a reverse DNS zone file, it likely contains mappings between IP addresses and corresponding domain names.
 
 
-#  cat /var/named/reverse.zone
+##  cat /var/named/reverse.zone
 We can confirm our file is save or not by using this command
 
 ![Alt text](<Screenshot from 2024-02-08 22-59-13.png>)
@@ -272,6 +312,7 @@ Output:
 
 
 # Setup single node Openshift Cluster
+
  ### Make directory
  [sumit_chaubey@sumit ~]$ mkdir ocp4
  ### Change directory
@@ -652,6 +693,14 @@ Copying config d6aa57e0dc done
 
 
 ![Alt text](<openshift image ss-1.png>)
+
+### References:
+
+https://www.redhat.com/en/technologies/cloud-computing/openshift
+
+https://www.redhat.com/en/technologies/cloud-computing/openshift/container-platform
+
+https://en.wikipedia.org/wiki/OpenShift
 
 
 
